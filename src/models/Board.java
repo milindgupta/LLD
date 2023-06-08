@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Board {
     private int size;
@@ -9,7 +10,7 @@ public class Board {
     public Board(int size) {
         this.size = size;
         this.board = new ArrayList<>();
-        for(int i = 0; in < size; ++i) {
+        for(int i = 0; i < size; ++i) {
             this.board.add(new ArrayList<>());
             for(int j =0; j<size;++j) {
                 this.board.get(i).add(new Cell(i,j));
@@ -37,6 +38,18 @@ public class Board {
         return board;
     }
 
+    public void print() {
+        for(List<Cell> row: board) {
+            System.out.println("|");
+            for(Cell cell: row) {
+                if(cell.getCellState().equals(CellState.EMPTY)) {
+                    System.out.printf(" - |" );
+                } else {
+                    System.out.printf(" " + cell.getPlayer().getSymbol().getAchar() + " |");
+                }
 
+            }
+        }
+    }
 
 }

@@ -30,7 +30,10 @@ public class Player {
     }
 
 
-
+    @Override
+    Cell makeMove() {
+        return super.makeMove();
+    }
 
     public PlayerType getPlayerType() {
         return playerType;

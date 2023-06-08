@@ -1,5 +1,8 @@
 package strategies.WinningStrategy;
 
+import models.Board;
+import models.Move;
+
 public class OrderOneRowWinningStrategy implements WinningStrategy{
 
     @Override
