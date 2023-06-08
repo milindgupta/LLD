@@ -149,7 +149,7 @@ public class Game {
     }
     public void makeMove(){
         Player currentPlayer = players.get(currrentMovePlayerIndex);
-        Cell proposedCell = currentPlayer.makeMove();
+        Cell proposedCell = currentPlayer.makeMove( board);
         if(!validateMove(proposedCell)) {
             return;
         }
@@ -170,7 +170,7 @@ public class Game {
             return;
         }
         currrentMovePlayerIndex + =1;
-        currrentMovePlayerIndex %= players.size();
+        currrentMovePlayerIndex %= players.size()  ;
     }
 
     public void printWinner() {

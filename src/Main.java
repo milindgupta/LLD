@@ -11,7 +11,10 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Game is starting");
+
         while(gameContraooler.getGameStatus().equals(GameStatus.IN_PROGRESS)) {
+            System.out.println("this is how board is");
             gameContraooler.displayBoard();
 
             System.out.print("do you want to undo? (y/n)");

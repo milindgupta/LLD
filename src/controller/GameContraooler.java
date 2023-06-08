@@ -17,8 +17,9 @@ public class GameContraooler {
     public void undo() {
 
     }
-    public void makeMove() {
-        Player currentPlayer = players.get(cu);
+    public void makeMove(Game game) {
+//        Player currentPlayer = players.get(cu);
+        game.makeMove();
 
 
     }
